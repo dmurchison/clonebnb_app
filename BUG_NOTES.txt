@@ -1,17 +1,20 @@
 This is a list of all the bugs I ran into during the development of this app.
 
 BUG:
-```Asset `application.css` was not declared to be precompiled in production.
-Declare links to your assets in `app/assets/config/manifest.js`.
-
+  ```Asset `application.css` was not declared to be precompiled in production.
+  Declare links to your assets in `app/assets/config/manifest.js`.
   //= link application.css
-
-and restart your server```
+  and restart your server```
 FIX:
-switched the `/app/assets/config/manifest.js` from `//= link_directory ..stylesheets.css`
-to...
-`//= link application.css`
+  switched the `/app/assets/config/manifest.js` from `//= link_directory ..stylesheets.css`
+  to...
+  `//= link application.css`
 
+
+BUG:
+  Tailwind navbar dropdown menu stuck and the button refactoring is not available in vanilla js
+FIX:
+  https://dev.to/mmccall10/tailwind-enter-leave-transition-effects-with-stimulus-js-5hl7
 
 
 
