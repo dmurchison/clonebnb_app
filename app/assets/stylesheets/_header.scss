@@ -1,0 +1,12 @@
+@import "./colors";
+
+.nav-container {
+  height: 80px;
+  align-items: center;
+}
+
+.logo-link {
+  font-size: xx-large;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: $CodeBnB-logo;
+}

@@ -1,0 +1,18 @@
+This is a list of all the bugs I ran into during the development of this app.
+
+BUG:
+```Asset `application.css` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link application.css
+
+and restart your server```
+FIX:
+switched the `/app/assets/config/manifest.js` from `//= link_directory ..stylesheets.css`
+to...
+`//= link application.css`
+
+
+
+
+
