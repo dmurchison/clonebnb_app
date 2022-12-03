@@ -5,7 +5,6 @@
   aria-labelledby="modal-title" 
   role="dialog" 
   aria-modal="true"
-  data-action="click->modal#showModal"
 >
 
   <div class="hidden" id="modal-trigger" data-action="click->modal#showModal">
@@ -23,8 +22,8 @@
   <div 
     id="modal-backdrop" 
     class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" 
-    data-transition-enter="opacity-0"
-    data-transition-enter-start="transform opacity-0 scale-95"
+    data-transition-enter="ease-out duration-300"
+    data-transition-enter-start="opacity-0"
     data-transition-enter-end="opacity-100"
     data-transition-leave="ease-in duration-200"
     data-transition-leave-start="opacity-100"
@@ -46,7 +45,7 @@
       -->
       <div 
         id="modal-panel" 
-        class="hidden relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:max-w-xl sm:w sm:p-6"
+        class="hidden relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:max-w-xl sm:w-full sm:p-6"
         data-transition-enter="ease-out duration-300"
         data-transition-enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
         data-transition-enter-end="opacity-100 translate-y-0 sm:scale-100"
@@ -65,10 +64,17 @@
             </div>
           </div>
 
+          <div class="clear"></div>
+
     
           <div class="pt-4">
-            <h4 class="text-xl text-gray-900 leading-6 mt-2 font-medium">Welcome to CloneBnB</h4>
-            <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur amet labore.</p>
+            <h4 class="text-2xl text-gray-900 leading-6 font-medium">Welcome to CloneBnB</h4>
+
+            <div class="rounded-md border border-gray-300 px-3 py-2 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
+              <label for="name" class="block text-xs font-medium text-gray-900">Name</label>
+              <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" placeholder="Jane Smith">
+            </div>
+
           </div>
         </div>
         <div class="mt-5 sm:mt-6">
