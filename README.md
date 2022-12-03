@@ -20,7 +20,7 @@
 * Database initialization
   * Rails Active Record
 
-# Repository Information
+## Repository Information
 * Deployment instructions
   * `bundle install`
   
