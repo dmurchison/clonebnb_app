@@ -10,8 +10,9 @@ export default class extends Controller {
 
     this.deviseAuthLinkTargets.forEach((link) => {
     
-      link.addEventListener('click', () => {
-        console.log('This is the deviseAuthLinks');
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('modal-trigger').click();
       });
 
     });

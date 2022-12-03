@@ -1,17 +1,26 @@
 # CloneBnB
 
 ## Basic Development Information
+* [Wiki Pages](https://github.com/dmurchison/clonebnb_app/wiki)
 * Ruby version
   * 3.1.1
 * Rails version
   * 7.0.4
 * System dependencies
-  * 
-* Database creation
+  * `./Gemfile`
+  * Devise
+  * Stimulus
+  * Styling
+    * Tailwind
+    * SCSS
+
+## Database Information
+* Database type
+  * PostgreSQL
 * Database initialization
-  * PostgreSQL -v 1.1
-* How to run the test suite
-* Services (job queues, cache servers, search engines, etc.)
+  * Rails Active Record
+
+# Repository Information
 * Deployment instructions
   * `bundle install`
   
