@@ -9,12 +9,10 @@ export default class extends Controller {
     this.openUserMenuTarget.addEventListener('click', this.toggleDropdownMenu, this.closeDropdownMenu)
 
     this.deviseAuthLinkTargets.forEach((link) => {
-    
       link.addEventListener('click', (e) => {
         e.preventDefault();
         document.getElementById('modal-trigger').click();
       });
-
     });
   }
 
