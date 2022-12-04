@@ -1,8 +1,9 @@
 # Bugs and Notes
 
 
-## 1. Bug
-- Asset `application.css` was not declared to be precompiled in production. Declare links to your assets in `app/assets/config/manifest.js`. //= link application.css and restart your server
+## 1. 
+- ### Bug
+  - Asset `application.css` was not declared to be precompiled in production. Declare links to your assets in `app/assets/config/manifest.js`. //= link application.css and restart your server
 - ### Fix
   - switched the `/app/assets/config/manifest.js` from `//= link_directory ..stylesheets.css` to... `//= link application.css`
 
