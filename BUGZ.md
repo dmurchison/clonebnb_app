@@ -1,4 +1,5 @@
-# Bugs and Notes
+# Bugs and Fixes
+
 
 
 ## 1. 
