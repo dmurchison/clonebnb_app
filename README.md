@@ -30,10 +30,11 @@ CloneBnB is a clone of [Airbnb](https://www.airbnb.com/), I chose to build this 
   - Active Record
 
 ### Testing and Debugging
-- RSpec
-- Capybara
-- Pry-Rails
-- ByeBug
+- rspec-rails
+- capybara
+- pry-rails
+- byebug
+- factory_bot_rails
 
 ### Repository
 - Cloning Instructions
