@@ -20,6 +20,7 @@
 
 ## 3. 
 - ### Bug
+  - RSpec Error
   - ```sh
     Homes GET /index succeeds 
     Failure/Error: <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
@@ -27,4 +28,4 @@
     Error: Function rgb is missing argument $green. on line 1 of stdin
 - ### Fix
   - Add `config.assets.css_compressor = nil` to `/config/environments/test.rb`
-  
+
