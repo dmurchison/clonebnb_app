@@ -54,7 +54,18 @@
         data-transition-leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
       >
         <div>
-          <h3 class="text-md font-medium leading-6 text-gray-900 text-center mb-4" id="modal-title">Log in or sign up</h3>
+
+        <div class="flex">
+          <div class="flex-none cursor-pointer" data-modal-target="closeModalButton">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </div>
+
+          <div class="grow">
+            <h3 class="text-md font-medium leading-6 text-gray-900 text-center mb-4" id="modal-title">Log in or sign up</h3>
+          </div>
+        </div>
 
           <%# Tailwind Divider %>
 
