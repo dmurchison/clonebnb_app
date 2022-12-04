@@ -1,14 +1,14 @@
 # Bugs and Notes
 
 
-## Bug1
+## 1. Bug
 - Asset `application.css` was not declared to be precompiled in production. Declare links to your assets in `app/assets/config/manifest.js`. //= link application.css and restart your server
 - ### Fix
   - switched the `/app/assets/config/manifest.js` from `//= link_directory ..stylesheets.css` to... `//= link application.css`
 
 
 
-## Bug2
+## 2. Bug
 - Tailwind navbar dropdown menu stuck and the button refactoring is not available in vanilla js
 - ### Fix
   - run `./bin/importmap pin el-transition`
@@ -18,23 +18,23 @@
 
 
 
-## Bug3
+## 3. Bug
 - TDD RSPEC Fail
 `Homes GET /index succeeds`
 `Failure/Error: <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>`
 
 `ActionView::Template::Error:`
 `Error: Function rgb is missing argument $green. on line 1 of stdin`
-### Fix
-- Add `config.assets.css_compressor = nil` to `/config/environments/test.rb`
+- ### Fix
+  - Add `config.assets.css_compressor = nil` to `/config/environments/test.rb`
 
 
 
 
-## Bug4
+## 4. Bug
 -
-### Fix
--
+- ### Fix
+  -
 
 
 
