@@ -58,6 +58,6 @@ Rails.application.configure do
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
 
-  # 
+  # This is so we can run RSpec without the sassc-rails error (bug number 3 from `/BUGZ` file)
   config.assets.css_compressor = nil
 end
