@@ -42,6 +42,13 @@ group :development, :test do
 end
 
 group :development do
+  gem "factory_bot_rails"
+  gem "foreman"
+  gem "byebug"
+  gem "annotate"
+  gem "better_errors"
+  gem "binding_of_caller"
+
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
