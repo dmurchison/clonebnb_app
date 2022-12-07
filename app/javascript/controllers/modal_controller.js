@@ -13,7 +13,7 @@ export default class extends Controller {
     });
   }
 
-  closeModal(event) {
+  closeModal = (event) => {
     const modalPanelClicked = document.getElementById('modal-panel').contains(event.target);
 
     if (!modalPanelClicked && event.target.id !== 'modal-trigger') {
@@ -23,7 +23,7 @@ export default class extends Controller {
     }
   }
 
-  showModal() {
+  showModal = () => {
     enter(document.getElementById('modal-wrapper'));
     enter(document.getElementById('modal-backdrop'));
     enter(document.getElementById('modal-panel'));

@@ -10,3 +10,16 @@
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: $CodeBnB-logo;
 }
+
+.invalid-inset-input-text-field {
+  border-color: $CodeBnB-errors !important;
+  label {
+    color: $CodeBnB-errors !important;
+  }
+  input[type="email"], input[type="text"] {
+    &:focus {
+      border-color: $CodeBnB-errors !important;
+    }
+    color: $CodeBnB-errors !important;
+  }
+}
