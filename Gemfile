@@ -13,10 +13,10 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Client Side
+gem "stimulus-rails"
 gem "sprockets-rails"
 gem "importmap-rails"
 gem "turbo-rails"
-gem "stimulus-rails"
 gem "tailwindcss-rails"
 gem "sassc-rails"
 
@@ -33,22 +33,15 @@ gem "devise"
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  gem "rspec-rails", "~> 5.1", ">= 5.1.2"
-  gem "pry-rails", :group => :development
   gem "factory_bot_rails"
+  gem "pry-rails", :group => :development
+  gem "rspec-rails", "~> 5.1", ">= 5.1.2"
 
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
 
 group :development do
-  gem "factory_bot_rails"
-  gem "foreman"
-  gem "byebug"
-  gem "annotate"
-  gem "better_errors"
-  gem "binding_of_caller"
-
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
@@ -58,8 +51,3 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-
-group :test do
-  gem "factory_bot"
-end
-
