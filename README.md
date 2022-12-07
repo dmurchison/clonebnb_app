@@ -17,6 +17,7 @@ CloneBnB is a clone of [Airbnb](https://www.airbnb.com/), I chose to build this 
 - Backend Rails Gems
   - Devise
   - Stimulus
+  - Axios (for api requests)
 - Styling
   - Tailwind
   - SCSS
