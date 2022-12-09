@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="relative z-0 flex-1 px-2 flex items-center justify-center sm:absolute sm:inset-0">
-        <div class="w-full sm:max-w-xs">
+        <div class="w-full sm:max-w-xs border rounded-md">
           <label for="search" class="sr-only">Search</label>
           <div class="relative">
             <div class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center">
@@ -19,7 +19,7 @@
                 <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
               </svg>
             </div>
-            <input id="search" name="search" class="block w-full border border-transparent rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-400 focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 focus:placeholder-gray-500 sm:text-sm hover:bg-gray-200" placeholder="Search" type="search">
+            <input id="search" name="search" class="block w-full rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-400 focus:bg-white focus:text-gray-900 focus:placeholder-gray-500 sm:text-sm hover:bg-gray-200" placeholder="Search" type="search">
           </div>
         </div>
       </div>
@@ -93,8 +93,12 @@
           >
             <!-- Active: "bg-gray-100", Not Active: "" -->
             <div class="py-1" role="none">
-              <a href="#" data-header-target="userAuthLink" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabindex="-1" id="user-menu-item-0">Sign Up</a>
-              <a href="#" data-header-target="userAuthLink" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabindex="-1" id="user-menu-item-1">Log in</a>
+              <% if user_signed_in? %>
+                <%= link_to "Log out", destroy_user_session_path, data: { "turbo-method": :delete }, class: "block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" %>
+              <% else %>
+                <a href="#" data-header-target="userAuthLink" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabindex="-1" id="user-menu-item-0">Sign Up</a>
+                <a href="#" data-header-target="userAuthLink" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabindex="-1" id="user-menu-item-1">Log in</a>
+              <% end %>
             </div>
 
             <div class="py-1" role="none">
@@ -137,5 +141,12 @@
     </div>
   </nav>
 </header>
+
+<%# Tailwind Divider %>
+<div class="relative">
+  <div class="absolute inset-0 flex items-center" aria-hidden="true">
+    <div class="w-full border-t border-gray-300"></div>
+  </div>
+</div>
 
 <%= render "shared/modal", modal_content: "home/user_auth_form" %>
