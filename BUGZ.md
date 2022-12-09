@@ -30,3 +30,11 @@
 - ### Fix
   - Add `config.assets.css_compressor = nil` to `/config/environments/test.rb`
 
+
+## 4.
+- ### Bug
+  - Devise User Authentication Submit Button
+- ### Fix
+  - Add `config.navigational_formats = ['*/*', :html, :turbo_stream]` to `config/initializers/devise.rb`
+
+
