@@ -11,6 +11,7 @@ gem "redis", "~> 4.0"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
+gem "geocoder"
 
 # Client Side
 gem "stimulus-rails"
