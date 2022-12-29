@@ -5,7 +5,6 @@ export default class extends Controller {
   static targets = ['email', 'emailWrapper', 'invalidSvg', 'errorMessage', 'submit'];
 
   connect() {
-    console.log('axios: ', axios);
     this.submitTarget.addEventListener('click', (e) => {
       e.preventDefault();
 
