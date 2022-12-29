@@ -38,3 +38,12 @@
   - Add `config.navigational_formats = ['*/*', :html, :turbo_stream]` to `config/initializers/devise.rb`
 
 
+## 5.
+- ### Bug
+  - lodash library isEmpty function not working
+- ### Fix
+  - Run `./bin/importmap unpin lodash`
+  - Run `./bin/importmap pin lodash-es`
+
+
+

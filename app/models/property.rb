@@ -5,6 +5,7 @@ class Property < ApplicationRecord
   validates :address_1, presence: true
   validates :city, presence: true
   validates :state, presence: true
+  validates :zip_code, presence: true
   validates :country, presence: true
 
   geocoded_by :address
