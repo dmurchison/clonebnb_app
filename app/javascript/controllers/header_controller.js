@@ -15,7 +15,7 @@ export default class extends Controller {
     });
   }
 
-  toggleDropdownMenu = () => {
+  toggleDropdownMenu() {
     toggle(document.getElementById('menu-dropdown-items'));
   }
 }

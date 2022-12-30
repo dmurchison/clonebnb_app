@@ -6,8 +6,8 @@ export default class extends Controller {
   static targets = ['property']
 
   connect() {
-    console.log(this.element.dataset.latitude);
-    console.log(this.element.dataset.longitude);
+    // console.log(this.element.dataset.latitude);
+    // console.log(this.element.dataset.longitude);
     
 
     if (isEmpty(this.element.dataset.latitude) && isEmpty(this.element.dataset.longitude)) {
@@ -20,19 +20,19 @@ export default class extends Controller {
     }
   }
 
-  setUserCoordinates = (coords) => {
+  setUserCoordinates(coords) {
     this.element.dataset.latitude = coords.latitude;
     this.element.dataset.longitude = coords.longitude;
   }
 
-  getUserCoordinates = () => {
+  getUserCoordinates() {
     return {
       latitude: this.element.dataset.latitude,
       longitude: this.element.dataset.longitude
     }
   }
 
-  setDistanceText = () => {
+  setDistanceText() {
     this.propertyTargets.forEach((propertyTarget) => {
       let distanceFrom = getDistance(
         this.getUserCoordinates(),

@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :property do
     name { "MyString" }
-    headling { "MyString" }
+    headline { "MyString" }
     description { "MyText" }
     city { "MyString" }
     state { "MyString" }
