@@ -34,7 +34,7 @@ export default class extends Controller {
     });
   }
 
-  submitForm = () => {
+  submitForm() {
     console.log('Submitted Form!')
   }
 
