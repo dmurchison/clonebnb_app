@@ -5,6 +5,7 @@ ruby "3.1.1"
 
 # MyGems
 gem "bootsnap", require: false
+gem "country_select", "~> 6.0"
 gem "devise"
 gem "geocoder"
 gem "jbuilder"
