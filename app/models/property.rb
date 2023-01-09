@@ -1,4 +1,5 @@
 class Property < ApplicationRecord
+  include Countriable
 
   CLEANING_FEE = 5_000.freeze
   CLEANING_FEE_MONEY = Money.new(CLEANING_FEE)
@@ -11,19 +12,16 @@ class Property < ApplicationRecord
   validates :city, presence: true
   validates :state, presence: true
   validates :country_code, presence: true
-
-  monetize :price_cents, allow_nil: true
-
-  geocoded_by :address
-
   # Only geocoding if not already present! HUGE performance bottleneck!
   after_validation :geocode, if: -> { latitude.blank? && longitude.blank? }
+
+  monetize :price_cents, allow_nil: true
+  geocoded_by :address
 
   has_many_attached :images, dependent: :destroy
 
   def address
-    # [address_1, address_2, city, state, country].compact.join(', ')
-    [state, country].compact.join(', ') # for testing
+    [state, country_name].compact.join(', ') # for testing
   end
 
   def default_image
