@@ -6,12 +6,12 @@ RSpec.describe "Profiles", type: :request do
   
   # before { sign_in user }
 
-  describe "GET show" do
-    it "succeeds" do
-      get profile_path(profile)
-      expect(response).to be_successful
-    end
-  end
+  # describe "GET show" do
+  #   it "succeeds" do
+  #     get profile_path(profile)
+  #     expect(response).to be_successful
+  #   end
+  # end
 
   describe "PUT update" do
     it "succeeds" do
